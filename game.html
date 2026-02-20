@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Document-Object-Modeling
+    </title>
+    
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <p class="yourpick">What's your pick?</p>
+    <button class="move-button js-rock-button">
+      <img class="move-icon" src="images/rock-emoji.png">
+    </button>
+    <button class="move-button js-paper-button">
+      <img class="move-icon" src="images/paper-emoji.png">
+    </button>
+    <button class="move-button js-scissor-button">
+      <img class="move-icon" src="images/scissors-emoji.png">
+    </button>
+    <p class="js-result css-result"></p>
+
+    <p class="js-moves css-moves"></p>
+
+    <p class="js-score css-score"></p>
+
+    <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScore();
+    " class="reset-score">
+      Reset scores
+    </button>
+    <button class="auto-play-button" onclick="autoPlay();">Auto Play</button>
+    <script src="script.js"></script>
+  </body>
+</html>
